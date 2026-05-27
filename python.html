@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Шпаргалка | Python и задачи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <a href="index.html" class="button">Главная</a>
+        <a href="theory.html" class="button">Теория</a>
+        <a href="python.html" class="button">Python & Задачи</a>
+        <a href="quiz.html" class="button">Проверь себя</a>
+    </div>
+
+    <div class="container">
+        <div class="mascot">
+            <img src="https://i.pinimg.com/736x/f3/f3/15/f3f315b7811b95fece2a5a998739ae34.jpg" alt="Мой помощник" class="mascot-img">
+            <span class="mascot-text">я с тобой, всё получится ♡</span>
+        </div>
+
+        <h1>🐍 Python — решение задач из экзамена</h1>
+
+        <h2>📌 Задача 12 (минимальная чётная цифра)</h2>
+        <pre><code>
+n = int(input())
+min_digit = 10
+while n > 0:
+    digit = n % 10
+    if digit % 2 == 0 and digit < min_digit:
+        min_digit = digit
+    n //= 10
+if min_digit == 10:
+    print("NO")
+else:
+    print(min_digit)
+        </code></pre>
+        <p>✅ При вводе 231 → выведет "NO" (нет чётных цифр).</p>
+
+        <h2>📌 Задача 4 (скорость передачи данных)</h2>
+        <p>Документ 16 Мбайт = 16 × 2²³ бит. Скорость 2²¹ бит/с.</p>
+        <ul class="topics-list">
+            <li>Способ А: сжатие 25% = 4 Мбайт. Время = 12 + (4×2²³ / 2²¹) + 3 = 12 + 16 + 3 = 31 сек</li>
+            <li>Способ Б: без сжатия = 16×2²³ / 2²¹ = 64 сек</li>
+            <li><strong>Ответ: А33 (быстрее на 33 секунды)</strong></li>
+        </ul>
+
+        <h2>📌 Задача 5 (пароли и байты)</h2>
+        <p>7 символов → 3 бита на символ. Пароль 25 символов → 75 бит → 10 байт.<br>
+        На 100 пользователей 2400 байт → 2400/100 = 24 байта на одного.<br>
+        <strong>Доп. сведения = 24 − 10 = 14 байт</strong></p>
+
+        <h2>📌 Задача 11 (запросы поисковика)</h2>
+        <p>Напряжённость | Поле | Пшеница = 210 + 330 + 440 − (20+50+60) + 10 = <strong>860</strong></p>
+
+        <a href="quiz.html" class="action-btn">🎯 Пройти тест</a>
+    </div>
+</body>
+</html>
